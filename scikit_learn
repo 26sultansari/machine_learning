@@ -1,0 +1,31 @@
+import numpy as np
+np.random.seed(1)
+from sklearn import cross_validation
+from sklearn import preprocessing
+import pandas as pd
+
+columns = [
+       'state',
+       'account length',
+       'area code',
+       'phone number',
+       'international plan',
+       'voice mail plan',
+       'number vmail messages',
+       'total day minutes',
+       'total day calls',
+       'total day charge',
+       'total eve minutes',
+       'total eve calls',
+       'total eve charge',
+       'total night minutes',
+       'total night charge',
+       'total intl minutes',
+       'total intl calls',
+       'number customer service calls',
+       'churn'
+]
+
+ df=pd.read_csv('normalization_churn', header = None, names = columns)
+ 
+ print ("dataset orjinal hali "+ df)
